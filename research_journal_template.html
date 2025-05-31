@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Research Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            height: 100vh;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 14px;
+            font-weight: lighter;
+            background-color: white;
+        }
+
+        section {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        .parent,
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            max-width: 50%;
+        }
+
+        .left, .topdiv, .bottomdiv {
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .topdiv, .bottomdiv {
+            height: 50vh;
+            width: 100%
+        }
+
+        .leftDoubleImage {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .leftDoubleImage img {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            width: auto;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 4em;
+            left: 2em;
+            width: calc(100% - 4em - 1em);
+            color: black;
+            font-size: 1em;
+            line-height: 1.0em;
+            background-color: white;
+            padding: 2px 5px;
+        }
+
+        .right {
+            padding: 3em;
+        }
+
+        h1 {
+            font-size: 6em;
+            font-weight: lighter;
+            text-transform: uppercase;
+            text-align: left;
+            margin-bottom: 20px;
+            width: 100%;
+            line-height: 0.9em;
+            background-color: #ff28d0;
+            color: white;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1em;
+            width: 100%;
+            background-color: #ff28d0;
+            color: black;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        h2::before {
+            content: "{";
+            line-height: 2em;
+        }
+
+        h2::after {
+            content: "}";
+        }
+
+        h3 {
+            font-size: 2em;
+            font-family: 'Press Start 2P', monospace;
+            color: white;
+            background-color: #ff28d0;
+            padding: 10px;
+            margin-bottom: 0.5em;
+        }
+
+        h4 {
+            font-size: 0.5em;
+            font-family: 'Press Start 2P', monospace;
+            background-color: #ff28d0;
+            color: black;
+            padding: 4px 8px;
+            display: inline-block;
+            margin-bottom: 0.5em;
+        }
+
+        .artist-body {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.6em;
+            color: black;
+            margin-bottom: 1em;
+            line-height: 1.6em;
+        }
+
+        a {
+            color: blue;
+            text-decoration: underline;
+            font-size: 0.8em;
+            width: 100%;
+            text-align: left;
+            word-wrap: break-word;
+        }
+
+        ol li {
+            border-bottom: 2px solid #ff28d0;
+            padding: 4px 0;
+            margin-left: 10px;
+        }
+
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 1cm;
+            }
+
+            body {
+                width: 297mm;
+                height: 210mm;
+                margin: 0;
+                padding: 0;
+                page-break-after: always;
+                font-size: 10pt;
+            }
+
+            section {
+                min-height: calc(100% - 2cm);
+                height: 100vh;
+                display: flex;
+                page-break-inside: avoid;
+                page-break-after: always !important;
+            }
+        }
+
+        .caption_url {
+            font-size: 0.8em;
+            color: #333;
+            background-color: white;
+            text-decoration: none;
+            word-wrap: break-word;
+            width: 80%;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <p class="artist-body">This is a sample text styled with .artist-body class.</p>
+</body>
+</html>
